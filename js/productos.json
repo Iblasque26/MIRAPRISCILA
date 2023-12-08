@@ -1,0 +1,62 @@
+[
+    {
+        "id": "Anillo-Saanvi",
+        "titulo": "Anillo Saanvi",
+        "imagen": "../img/anillouno.jpeg",
+        "categoria": {
+            "nombre": "Anillos",
+            "id": "anillos"
+        },
+        "precio": 500
+    },
+    {
+        "id": "Anillo-Ana",
+        "titulo": "Anillo Ana",
+        "imagen": "../img/anillodos.jpg",
+        "categoria": {
+            "nombre": "Anillos",
+            "id": "anillos"
+        },
+        "precio": 500
+    },
+    {
+        "id": "Pulsera-Alegra",
+        "titulo": "Pulsera Alegra",
+        "imagen": "../img/pulserauno.jpeg",
+        "categoria": {
+            "nombre": "Pulseras",
+            "id": "pulseras"
+        },
+        "precio": 700
+    },
+    {
+        "id": "Pulsera-Cactus",
+        "titulo": "Pulsera Cactus",
+        "imagen": "../img/pulserados.jpeg",
+        "categoria": {
+            "nombre": "Pulseras",
+            "id": "pulseras"
+        },
+        "precio": 700
+    },
+    {
+        "id": "Collar-Ojo",
+        "titulo": "Collar Ojo Acero Blanco",
+        "imagen": "../img/collaruno.jpeg",
+        "categoria": {
+            "nombre": "Collares",
+            "id": "collares"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "Collar-Corazon",
+        "titulo": "Collar Corazón Acero Blanco",
+        "imagen": "../img/collardos.jpeg",
+        "categoria": {
+            "nombre": "Collares",
+            "id": "collares"
+        },
+        "precio": 1000
+    }
+]
