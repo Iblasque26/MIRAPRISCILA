@@ -7,12 +7,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 let productos = [];
 
-fetch("./js/productos.json")
-    .then(response => response.json())
-    .then(data => {
-        productos = data;
+fetch("../js/productos.json")
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+      productos = data;
+      console.log(productos);
         cargarProductos(productos);
-    })
+  })
+  .catch(error => {
+    console.error('Error en la solicitud fetch:', error);
+  });
 
 
 function cargarProductos(productosElegidos) {
@@ -20,19 +29,21 @@ function cargarProductos(productosElegidos) {
     contenedorProductos.innerHTML = "";
 
     productosElegidos.forEach(producto => {
-
+        //Cargar productos en el HTML con estilos lindos
         const div = document.createElement("div");
         div.classList.add("producto");
         div.innerHTML = `
-            <div class="card shadow-sm" data-aos="fade-left">
-                <img src="${producto.imagen}" alt="${producto.titulo}">
-                <button class="productoAgregar card-body" id="${producto.id}">
-                    <p class="card-text">${producto.titulo}</p>
-                    <p>$${producto.precio}</p>
-                </button>
-            </div>
+        <div class="producto-card card shadow-sm">
+    <img src="${producto.imagen}" alt="${producto.nombre}" class="producto-img">
+    <div class="producto-info">
+        <h5 class="producto-titulo">${producto.titulo}</h5>
+        <p class="producto-precio">$${producto.precio}</p>
+        <button class="producto-agregar" id="${producto.id}">Agregar al Carrito</button>
+    </div>
+</div>
+
         `;
-        contenedorProductos.append(div);
+        contenedorProductos.appendChild(div);
     });
     botonAgregar();
 }

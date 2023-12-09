@@ -351,3 +351,54 @@ transition: background-color .3s, color .2s;
     transform: translateY(0);
   }
 }
+
+
+.producto-card {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.producto-card:hover {
+  transform: scale(1.05);
+}
+
+.producto-img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.producto-info {
+  padding: 1rem;
+}
+
+.producto-titulo {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #4d4d4d;
+}
+
+.producto-precio {
+  font-size: 1.1rem;
+  color: #8c6239;
+}
+
+.producto-agregar {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
+  background-color: #8c6239;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.producto-agregar:hover {
+  background-color: #634128;
+}
